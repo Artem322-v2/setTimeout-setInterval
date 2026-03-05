@@ -1,32 +1,32 @@
-// Задание 1
+// // Задание 1
 
-function timer(seconds) {
-    let remaining = seconds;
+// function timer(seconds) {
+//     let remaining = seconds;
 
-    function tick() {
-        console.log(`Осталось: ${remaining} сек`);
-        remaining--;
+//     function tick() {
+//         console.log(`Осталось: ${remaining} сек`);
+//         remaining--;
 
-        if (remaining >= 0) {
-            setTimeout(tick, 1000); 
-        } else {
-            console.log("Время вышло!");
-        }
-    }
+//         if (remaining >= 0) {
+//             setTimeout(tick, 1000); 
+//         } else {
+//             console.log("Время вышло!");
+//         }
+//     }
 
-    tick(); 
+//     tick(); 
 
-};
+// };
 
-timer(10);
+// timer(10);
 
-// Задание 2
+// // Задание 2
 
-function timerWater () {
-    alert ('не забудь выпить воды');
-};
+// function timerWater () {
+//     alert ('не забудь выпить воды');
+// };
 
-setInterval (timerWater, 30 * 60 *1000);
+// setInterval (timerWater, 30 * 60 *1000);
 
 
 
@@ -42,12 +42,16 @@ beggin.addEventListener('click', function () {
     const delayText = delayInput.value;
     const message = textInput.value;
 
+    if (delayText === '' || message === '') {
+        alert ('Заполните все поля');
+        return
+    }
+
     const delayMilliseconds = delayText * 1000;
 
     function greet() {
 
-        console.log('Задержка:', delayText);
-        console.log('Сообщение:', message);
+        alert ('Задержка: ' + delayText + '\n' + 'Сообщение: ' + message);
     }
 
     if (intervalId) {
