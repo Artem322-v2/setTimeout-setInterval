@@ -43,7 +43,7 @@ beggin.addEventListener('click', function () {
     const message = textInput.value;
 
     if (delayText === '' || message === '') {
-        alert ('Заполните все поля');
+        alert('Заполните все поля');
         return
     }
 
@@ -51,16 +51,15 @@ beggin.addEventListener('click', function () {
 
     function greet() {
 
-        alert ('Задержка: ' + delayText + '\n' + 'Сообщение: ' + message);
+        alert('Задержка: ' + delayText + '\n' + 'Сообщение: ' + message);
     }
 
     if (intervalId) {
         clearInterval(intervalId);
         intervalId = null;
-    } else {
-
-        intervalId = setInterval(greet, delayMilliseconds);
     }
+
+    intervalId = setInterval(greet, delayMilliseconds);
 
 })
 
